@@ -1,0 +1,15 @@
+start locator --name=l --port=1337
+
+start server --name=s1 --cache-xml-file=C:\Users\crusn\IdeaProjects\GemfireClient\src\main\resources\server.xml --server-port=1338
+
+start server --name=s2 --cache-xml-file=C:\Users\crusn\IdeaProjects\GemfireClient\src\main\resources\server2.xml --server-port=1339
+
+stop server --dir=s2
+
+start server --name=s2 --cache-xml-file=C:\Users\crusn\IdeaProjects\GemfireClient\src\main\resources\server2.xml --server-port=1339
+
+stop server --dir=s1
+
+start server --name=s3 --cache-xml-file=C:\Users\crusn\IdeaProjects\GemfireClient\src\main\resources\server2.xml --server-port=1340
+
+stop server --dir=s2
